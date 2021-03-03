@@ -23,7 +23,7 @@ class CreatesProfilesTable extends Migration
 //            $table->string('countryCode')->nullable();
 //            $table->string('phone')->nullable();
 //            $table->string('password');
-            $table->string('email')->unique();
+//            $table->string('email')->unique();
 //            $table->unsignedBigInteger('reference')->nullable();
 //            $table->foreign('referance')->references('id')->on('profiles')->onDelete('cascade');
 //            $table->unsignedBigInteger('parent')->nullable();

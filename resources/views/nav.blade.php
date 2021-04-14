@@ -2,8 +2,8 @@
     <div class="iq-navbar-custom">
         <div class="iq-sidebar-logo">
             <div class="top-logo">
-                <a href="index.html" class="logo">
-                    <img src="images/logo.png" class="img-fluid" alt="">
+                <a href="{{ ('home') }}" class="logo">
+                    <img src="{{ asset('images/logo.png') }}" class="img-fluid" alt="">
                     <span>Royiva</span>
                 </a>
             </div>

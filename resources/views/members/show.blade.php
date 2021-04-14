@@ -24,7 +24,7 @@
                                         <img src="{{ asset('images/user/11.png') }}" alt="profile-img" class="avatar-130 img-fluid">
                                     </div>
                                     <div class="text-center mt-3 pl-3 pr-3">
-                                        <h4><b> {{ $member->name }} </b></h4>
+                                        <h4><b> {{ $members->name }} </b></h4>
                                         <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus repudiandae eveniet harum.</p>
                                     </div>
                                     <hr>

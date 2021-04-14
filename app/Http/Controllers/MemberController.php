@@ -8,15 +8,16 @@ class MemberController extends Controller
 {
   public function index()
   {
-      $members = \App\Models\User::where('memberId', auth()->user()->id)->get();
+    $members = \App\Models\User::where('memberId', auth()->user()->id)->get();
 
-      return view('members.index', compact('members'));
+    return view('members.index', compact('members'));
   }
 
-  public function show($memberId)
+  public function show($profileId)
   {
-    $member = \App\Models\User::find($memberId);
+    // dd(\App\Models\User::where('id', $profileId)->first()->memberId);
+    $members = \App\Models\User::where('id', $profileId)->where('memberId', auth()->user()->id)->get();
 
-    return view('members.show', compact('member'));
+    return view('members.show', compact('members'));
   }
 }

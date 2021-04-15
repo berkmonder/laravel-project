@@ -27,13 +27,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto navbar-list">
                     <li class="nav-item">
-                        <a class="search-toggle iq-waves-effect language-title" href="#"><img src="images/small/flag-01.png" alt="img-flaf" class="img-fluid mr-1" style="height: 16px; width: 16px;" /> English <i class="ri-arrow-down-s-line"></i></a>
+                        <a class="search-toggle iq-waves-effect language-title" href="#"><img src={{ asset("images/small/flag-01.png") }} alt="img-flaf" class="img-fluid mr-1" style="height: 16px; width: 16px;" /> English <i class="ri-arrow-down-s-line"></i></a>
                         <div class="iq-sub-dropdown">
-                            <a class="iq-sub-card" href="#"><img src="images/small/flag-02.png" alt="img-flaf" class="img-fluid mr-2" />French</a>
-                            <a class="iq-sub-card" href="#"><img src="images/small/flag-03.png" alt="img-flaf" class="img-fluid mr-2" />Spanish</a>
-                            <a class="iq-sub-card" href="#"><img src="images/small/flag-04.png" alt="img-flaf" class="img-fluid mr-2" />Italian</a>
-                            <a class="iq-sub-card" href="#"><img src="images/small/flag-05.png" alt="img-flaf" class="img-fluid mr-2" />German</a>
-                            <a class="iq-sub-card" href="#"><img src="images/small/flag-06.png" alt="img-flaf" class="img-fluid mr-2" />Japanese</a>
+                            <a class="iq-sub-card" href="#"><img src={{ asset("images/small/flag-02.png") }} alt="img-flaf" class="img-fluid mr-2" />French</a>
+                            <a class="iq-sub-card" href="#"><img src={{ asset("images/small/flag-03.png") }} alt="img-flaf" class="img-fluid mr-2" />Spanish</a>
+                            <a class="iq-sub-card" href="#"><img src={{ asset("images/small/flag-04.png") }} alt="img-flaf" class="img-fluid mr-2" />Italian</a>
+                            <a class="iq-sub-card" href="#"><img src={{ asset("images/small/flag-05.png") }} alt="img-flaf" class="img-fluid mr-2" />German</a>
+                            <a class="iq-sub-card" href="#"><img src={{ asset("images/small/flag-06.png") }} alt="img-flaf" class="img-fluid mr-2" />Japanese</a>
                         </div>
                     </li>
                     <li class="nav-item iq-full-screen">
@@ -53,7 +53,7 @@
                                     <a href="#" class="iq-sub-card" >
                                         <div class="media align-items-center">
                                             <div class="">
-                                                <img class="avatar-40 rounded" src="images/user/01.jpg" alt="">
+                                                <img class="avatar-40 rounded" src={{ asset("images/user/01.jpg") }} alt="">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <h6 class="mb-0 ">Emma Watson Bini</h6>
@@ -65,7 +65,7 @@
                                     <a href="#" class="iq-sub-card" >
                                         <div class="media align-items-center">
                                             <div class="">
-                                                <img class="avatar-40 rounded" src="images/user/02.jpg" alt="">
+                                                <img class="avatar-40 rounded" src={{ asset("images/user/02.jpg") }} alt="">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <h6 class="mb-0 ">New customer is join</h6>
@@ -77,7 +77,7 @@
                                     <a href="#" class="iq-sub-card" >
                                         <div class="media align-items-center">
                                             <div class="">
-                                                <img class="avatar-40 rounded" src="images/user/03.jpg" alt="">
+                                                <img class="avatar-40 rounded" src={{ asset("images/user/03.jpg") }} alt="">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <h6 class="mb-0 ">Two customer is left</h6>
@@ -89,7 +89,7 @@
                                     <a href="#" class="iq-sub-card" >
                                         <div class="media align-items-center">
                                             <div class="">
-                                                <img class="avatar-40 rounded" src="images/user/04.jpg" alt="">
+                                                <img class="avatar-40 rounded" src={{ asset("images/user/04.jpg") }} alt="">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <h6 class="mb-0 ">New Mail from Fenny</h6>
@@ -116,7 +116,7 @@
                                     <a href="#" class="iq-sub-card" >
                                         <div class="media align-items-center">
                                             <div class="">
-                                                <img class="avatar-40 rounded" src="images/user/01.jpg" alt="">
+                                                <img class="avatar-40 rounded" src={{ asset("images/user/01.jpg") }} alt="">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <h6 class="mb-0 ">Bini Emma Watson</h6>
@@ -127,7 +127,7 @@
                                     <a href="#" class="iq-sub-card" >
                                         <div class="media align-items-center">
                                             <div class="">
-                                                <img class="avatar-40 rounded" src="images/user/02.jpg" alt="">
+                                                <img class="avatar-40 rounded" src={{ asset("images/user/02.jpg") }} alt="">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <h6 class="mb-0 ">Lorem Ipsum Watson</h6>
@@ -138,7 +138,7 @@
                                     <a href="#" class="iq-sub-card" >
                                         <div class="media align-items-center">
                                             <div class="">
-                                                <img class="avatar-40 rounded" src="images/user/03.jpg" alt="">
+                                                <img class="avatar-40 rounded" src={{ asset("images/user/03.jpg") }} alt="">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <h6 class="mb-0 ">Why do we use it?</h6>
@@ -149,7 +149,7 @@
                                     <a href="#" class="iq-sub-card" >
                                         <div class="media align-items-center">
                                             <div class="">
-                                                <img class="avatar-40 rounded" src="images/user/04.jpg" alt="">
+                                                <img class="avatar-40 rounded" src={{ asset("images/user/04.jpg") }} alt="">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <h6 class="mb-0 ">Variations Passages</h6>
@@ -160,7 +160,7 @@
                                     <a href="#" class="iq-sub-card" >
                                         <div class="media align-items-center">
                                             <div class="">
-                                                <img class="avatar-40 rounded" src="images/user/05.jpg" alt="">
+                                                <img class="avatar-40 rounded" src={{ asset("images/user/05.jpg") }} alt="">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <h6 class="mb-0 ">Lorem Ipsum generators</h6>
@@ -177,7 +177,7 @@
             <ul class="navbar-list">
                 <li>
                     <a href="#" class="search-toggle iq-waves-effect d-flex align-items-center">
-                        <img src="images/user/1.jpg" class="img-fluid rounded mr-3" alt="user">
+                        <img src={{ asset("images/user/1.jpg") }} class="img-fluid rounded mr-3" alt="user">
                         <div class="caption">
                             <h6 class="mb-0 line-height">{{ auth()->user()->name }}</h6>
                             <span class="font-size-12">Available</span>

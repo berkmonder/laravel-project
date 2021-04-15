@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class MemberController extends Controller
 {
+
+  public function __construct()
+  {
+      $this->middleware('auth');
+  }
+
   public function index()
   {
     $members = \App\Models\User::where('memberId', auth()->user()->id)->get();

@@ -16,7 +16,7 @@ class MemberController extends Controller
   public function show($profileId)
   {
     // dd(\App\Models\User::where('id', $profileId)->first()->memberId);
-    $members = \App\Models\User::where('id', $profileId)->where('memberId', auth()->user()->id)->get();
+    $members = \App\Models\User::where('id', $profileId)->where('memberId', auth()->user()->id)->first();
 
     return view('members.show', compact('members'));
   }

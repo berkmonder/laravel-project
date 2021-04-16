@@ -19,14 +19,11 @@ class MemberController extends Controller
     return view('members.index', compact('members'));
   }
 
-  public function show($profileId)
+  public function show($memberId)
   {
-    // dd(\App\Models\User::where('id', $profileId)->first()->memberId);
-    $members = \App\Models\User::where('id', $profileId)->where('memberId', auth()->user()->id)->first();
+    // $members = \App\Models\User::where('id', $memberId)->where('memberId', auth()->user()->id)->first();
+    $members = \App\Models\User::where('memberId', auth()->user()->id)->findOrFail($memberId); // Alternative
 
-    if (!$members){
-      return redirect('/');
-    }
     return view('members.show', compact('members'));
   }
 }

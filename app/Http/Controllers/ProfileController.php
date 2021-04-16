@@ -15,4 +15,12 @@ class ProfileController extends Controller
   {
       return view('profile.index');
   }
+
+  public function show(\App\Models\User $profile)
+  {
+    // $profiles = \App\Models\User::where('id', $profileId)->first(); // Alternative 1
+    // $profiles = \App\Models\User::findOrFail($profileId); // Alternative 2
+
+    return view('profile.show', compact('profile'));
+  }
 }

@@ -37,7 +37,7 @@
             <ul class="navbar-list">
                 <li>
                     <a href="#" class="search-toggle iq-waves-effect d-flex align-items-center">
-                        <img src={{ asset("images/user/1.jpg") }} class="img-fluid rounded mr-3" alt="user">
+                        <img src="{{asset('/storage/images/'.Auth::user()->image)}}" class="img-fluid rounded mr-3" alt="user">
                         <div class="caption">
                             <h6 class="mb-0 line-height">{{ auth()->user()->name }}</h6>
                             <span class="font-size-12">Available</span>

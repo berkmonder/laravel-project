@@ -21,7 +21,7 @@
                                     <div class="doc-profile-bg bg-primary" style="height:150px;">
                                     </div>
                                     <div class="doctor-profile text-center">
-                                        <img src="{{ asset('images/user/11.png') }}" alt="profile-img" class="avatar-130 img-fluid">
+                                        <img src="{{ "/storage/images/".$members->image }}" alt="profile-img" class="avatar-130 img-fluid">
                                     </div>
                                     <div class="text-center mt-3 pl-3 pr-3">
                                         <h4><b> {{ $members->name }} </b></h4>

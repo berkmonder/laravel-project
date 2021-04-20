@@ -7,7 +7,7 @@
                         <div class="doc-profile-bg bg-primary" style="height:150px;">
                         </div>
                         <div class="doctor-profile text-center">
-                            <img src="images/user/11.png" alt="profile-img" class="avatar-130 img-fluid">
+                            <img src="{{asset('/storage/images/'.Auth::user()->image)}}" alt="profile-img" class="avatar-130 img-fluid">
                         </div>
                         <div class="text-center mt-3 pl-3 pr-3">
                             <h4><b>{{ auth()->user()->name }}</b></h4>
@@ -25,17 +25,15 @@
                     <div class="about-info m-0 p-0">
                         <div class="row">
                             <div class="col-4">First Name:</div>
-                            <div class="col-8">Bini</div>
-                            <div class="col-4">Last Name:</div>
-                            <div class="col-8">Jets</div>
-                            <div class="col-4">Age:</div>
-                            <div class="col-8">27</div>
+                            <div class="col-8">{{ auth()->user()->name }}</div>
+                            <div class="col-4">User Id</div>
+                            <div class="col-8">{{ auth()->user()->id }}</div>
                             <div class="col-4">Position:</div>
                             <div class="col-8">Senior doctor</div>
                             <div class="col-4">Email:</div>
-                            <div class="col-8"><a href="mailto:biniJets24@demo.com"> biniJets24@demo.com </a></div>
-                            <div class="col-4">Phone:</div>
-                            <div class="col-8"><a href="tel:001-2351-25612">001 2351 256 12</a></div>
+                            <div class="col-8"><a href="mailto:biniJets24@demo.com"> {{ auth()->user()->email }} </a></div>
+                            <div class="col-4">Member Id</div>
+                            <div class="col-8"><a href="tel:001-2351-25612">{{ auth()->user()->memberId }}</a></div>
                             <div class="col-4">Location:</div>
                             <div class="col-8">USA</div>
                         </div>
@@ -50,16 +48,22 @@
                 </div>
                 <div class="iq-card-body">
                     <ul class="profile-img-gallary d-flex flex-wrap p-0 m-0">
-                        <li class="col-md-4 col-6 pb-3"><a href="javascript:void();"><img src="images/page-img/g1.jpg" alt="gallary-image" class="img-fluid"></a></li>
-                        <li class="col-md-4 col-6 pb-3"><a href="javascript:void();"><img src="images/page-img/g2.jpg" alt="gallary-image" class="img-fluid"></a></li>
-                        <li class="col-md-4 col-6 pb-3"><a href="javascript:void();"><img src="images/page-img/g3.jpg" alt="gallary-image" class="img-fluid"></a></li>
-                        <li class="col-md-4 col-6 pb-3"><a href="javascript:void();"><img src="images/page-img/g4.jpg" alt="gallary-image" class="img-fluid"></a></li>
-                        <li class="col-md-4 col-6 pb-3"><a href="javascript:void();"><img src="images/page-img/g5.jpg" alt="gallary-image" class="img-fluid"></a></li>
-                        <li class="col-md-4 col-6 pb-3"><a href="javascript:void();"><img src="images/page-img/g6.jpg" alt="gallary-image" class="img-fluid"></a></li>
-                        <li class="col-md-4 col-6 pb-0"><a href="javascript:void();"><img src="images/page-img/g7.jpg" alt="gallary-image" class="img-fluid"></a></li>
-                        <li class="col-md-4 col-6 pb-0"><a href="javascript:void();"><img src="images/page-img/g8.jpg" alt="gallary-image" class="img-fluid"></a></li>
-                        <li class="col-md-4 col-6 pb-0"><a href="javascript:void();"><img src="images/page-img/g9.jpg" alt="gallary-image" class="img-fluid"></a></li>
+                        <li class="col-md-4 col-6 pb-3">
+                            <a href="javascript:void();">
+                                <img src="{{asset('/storage/images/'.Auth::user()->image)}}" alt="gallary-image" class="img-fluid">
+                            </a>
+                        </li>
                     </ul>
+                </div>
+                @if(Auth::user()->image)
+                    <img class="image rounded-circle" src="{{asset('/storage/images/'.Auth::user()->image)}}" alt="profile_image" style="width: 80px;height: 80px; padding: 10px; margin: 0px; ">
+                @endif
+                <div class="card-body">
+                    <form action="{{route('home.upload')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <input type="file" name="image">
+                        <input type="submit" value="Upload">
+                    </form>
                 </div>
             </div>
         </div>

@@ -24,6 +24,7 @@ class MemberController extends Controller
     // $members = \App\Models\User::where('id', $memberId)->where('memberId', auth()->user()->id)->first();
     $members = \App\Models\User::where('memberId', auth()->user()->id)->findOrFail($memberId); // Alternative
 
+
     return view('members.show', compact('members'));
   }
 }

@@ -1,10 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Input;
+use App\User;
 
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::post('/home','HomeController@upload')->name('home.upload');
 // Route::get('/home', 'HomeController@index');
 
 Route::get('/profile', 'ProfileController@index');

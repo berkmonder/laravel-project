@@ -53,7 +53,7 @@
                      <div class="iq-card">
                         <div class="iq-card-body text-center">
                            <div class="doc-profile">
-                              <img class="rounded-circle img-fluid avatar-80" src="images/user/12.jpg" alt="profile">
+                              <img class="rounded-circle img-fluid avatar-80" src="{{ "/storage/images/".$member->image }}" alt="profile">
                            </div>
                            <div class="iq-doc-info mt-3">
                               <h4> {{ $member->name }} </h4>

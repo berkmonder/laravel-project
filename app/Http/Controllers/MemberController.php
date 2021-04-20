@@ -14,9 +14,11 @@ class MemberController extends Controller
 
   public function index()
   {
-    $members = \App\Models\User::where('memberId', auth()->user()->id)->get();
+    $members1 = \App\Models\User::where('memberId', auth()->user()->id)->get();
+    // $members2 = \App\Models\User::where('memberId', $members1->id)->get();
+    // $members3 = \App\Models\User::where('memberId', $members2->id)->get();
 
-    return view('members.index', compact('members'));
+    return view('members.index', compact('members1'));
   }
 
   public function show($memberId)
@@ -24,7 +26,7 @@ class MemberController extends Controller
     // $members = \App\Models\User::where('id', $memberId)->where('memberId', auth()->user()->id)->first();
     $members = \App\Models\User::where('memberId', auth()->user()->id)->findOrFail($memberId); // Alternative
 
-
+    dd($members);
     return view('members.show', compact('members'));
   }
 }

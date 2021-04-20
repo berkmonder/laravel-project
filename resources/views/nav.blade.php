@@ -26,12 +26,12 @@
                     <li class="nav-item">
                         <a class="search-toggle iq-waves-effect language-title" href="#"><img src={{ asset("images/small/flag-01.png") }} alt="img-flaf" class="img-fluid mr-1" style="height: 16px; width: 16px;" /> English <i class="ri-arrow-down-s-line"></i></a>
                         <div class="iq-sub-dropdown">
-                            <a class="iq-sub-card" href="#"><img src={{ asset("images/small/flag-02.png") }} alt="img-flaf" class="img-fluid mr-2" />French</a>
+                            <a class="iq-sub-card" href="#"><img src={{ asset("images/small/flag-02.png") }} alt="img-flaf" class="img-fluid mr-2" />Türkçe</a>
                         </div>
                     </li>
-                    <li class="nav-item iq-full-screen">
+                    {{-- <li class="nav-item iq-full-screen">
                         <a href="#" class="iq-waves-effect" id="btnFullscreen"><i class="ri-fullscreen-line"></i></a>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
             <ul class="navbar-list">
@@ -61,7 +61,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="profile-edit.html" class="iq-sub-card iq-bg-primary-hover">
+                                <a href="profile/edit/{{ auth()->user()->id }}" class="iq-sub-card iq-bg-primary-hover">
                                     <div class="media align-items-center">
                                         <div class="rounded iq-card-icon iq-bg-primary">
                                             <i class="ri-profile-line"></i>

@@ -12,6 +12,8 @@ Route::post('/home','HomeController@upload')->name('home.upload');
 
 Route::get('/profile', 'ProfileController@index');
 Route::get('/profile/{profile}', 'ProfileController@show');
+Route::get('/profile/edit/{profile}', 'ProfileController@edit');
+Route::patch('/profile/{profile}', 'ProfileController@update');
 
 Route::get('/members', 'MemberController@index');
 Route::get('/members/{memberId}', 'MemberController@show');

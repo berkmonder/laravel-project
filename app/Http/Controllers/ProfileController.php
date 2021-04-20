@@ -23,4 +23,22 @@ class ProfileController extends Controller
 
     return view('profile.show', compact('profile'));
   }
+  
+  public function edit($profile)
+  {
+    $profile = \App\Models\User::where('id', auth()->user()->id)->where('id', $profile)->first();
+
+    return view('profile.edit', compact('profile'));
+  }
+
+  public function update(\App\Models\User $profile)
+  {
+    $data = request()->validate([
+      'name' => 'required',
+    ]);
+
+    $profile->update($data);
+
+    return redirect('/profile');
+  }
 }

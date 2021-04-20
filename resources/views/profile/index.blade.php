@@ -93,29 +93,7 @@
                    </div>
                 </div>
             <!-- Footer -->
-            <footer class="bg-white iq-footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item"><a href="privacy-policy.html">Privacy Policy</a></li>
-                                <li class="list-inline-item"><a href="terms-of-service.html">Terms of Use</a></li>
-                            </ul>
-                        </div>
-                        <div class="iq-doc-social-info text-center">
-                           <ul class="m-0 p-0 list-inline">
-                              <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
-                              <li><a href="#"><i class="ri-twitter-fill"></i></a> </li>
-                              <li><a href="#"><i class="ri-instagram-fill"></i></a> </li>
-                              <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
-                           </ul>
-                        </div>
-                        <div class="col-lg-6 text-right">
-                            Copyright 2020 <a href="#">Royiva</a> All Rights Reserved.
-                        </div>
-                    </div>
-                </div>
-            </footer>
+                @include('footer')
             <!-- Footer END -->
         </div>
     </div>

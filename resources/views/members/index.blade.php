@@ -48,28 +48,23 @@
                      </div>
                   </td>
                 @endforeach --}}
-                @foreach ($members as $member)
+                @foreach ($members1 as $member1)
                   <div class="col-sm-6 col-md-3">
                      <div class="iq-card">
                         <div class="iq-card-body text-center">
                            <div class="doc-profile">
-                              <img class="rounded-circle img-fluid avatar-80" src="{{ "/storage/images/".$member->image }}" alt="profile">
+                              <a href="/members/{{ $member1->id }}"><img class="rounded-circle img-fluid avatar-80" src="{{ "/storage/images/".$member1->image }}" alt="profile"></a>
                            </div>
                            <div class="iq-doc-info mt-3">
-                              <h4> {{ $member->name }} </h4>
-                              <p class="mb-0" >{{ $member->id }}</p>
+                              <h4> {{ $member1->name }} </h4>
+                              <p class="mb-0" >{{ $member1->id }}</p>
                            </div>
-                           <div class="iq-doc-description mt-2">
-                              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor non erat non gravida. In id ipsum consequat</p>
-                           </div>
-                           <div class="iq-doc-social-info mt-3 mb-3">
-                              <ul class="m-0 p-0 list-inline">
-                                 <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
-                                 <li><a href="#"><i class="ri-twitter-fill"></i></a> </li>
-                                 <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
-                              </ul>
-                           </div>
-                           <a href="/members/{{ $member->id }}" class="btn btn-primary">View Profile</a>
+                           @foreach (\App\Models\User::where('memberId', $member1->id)->get() as $member2)
+                              {{ $member2->name }}
+                              @foreach (\App\Models\User::where('memberId', $member2->id)->get() as $member3)
+                                 {{ $member3->name }}
+                              @endforeach
+                           @endforeach
                         </div>
                      </div>
                   </div>

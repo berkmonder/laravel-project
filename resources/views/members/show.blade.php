@@ -45,13 +45,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="iq-card-body">
-                            <div class="list-inline m-0 p-0">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-                                    <div><a href="/members" class="btn iq-bg-primary">Members</a></div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3">

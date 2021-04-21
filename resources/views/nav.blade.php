@@ -61,7 +61,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="profile/edit/{{ auth()->user()->id }}" class="iq-sub-card iq-bg-primary-hover">
+                                <a href="/profile/edit/{{ auth()->user()->id }}" class="iq-sub-card iq-bg-primary-hover">
                                     <div class="media align-items-center">
                                         <div class="rounded iq-card-icon iq-bg-primary">
                                             <i class="ri-profile-line"></i>

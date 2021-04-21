@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->unsignedInteger('memberId')->default(1);
             $table->string('image')->default('user.png');
+            // $table->boolean('hidden'); # To make profiles hidden
             $table->rememberToken();
             $table->timestamps();
         });

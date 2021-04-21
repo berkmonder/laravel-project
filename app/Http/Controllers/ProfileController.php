@@ -35,8 +35,15 @@ class ProfileController extends Controller
   {
     $data = request()->validate([
       'name' => 'required',
+      'image' => '',
     ]);
 
+    if(request()->hasFile('image')){
+      $filename = request()->image->getClientOriginalName();
+      request()->image->storeAs('images',$filename,'public');
+      Auth()->user()->update(['image'=>$filename]);
+    }
+    
     $profile->update($data);
 
     return redirect('/profile');

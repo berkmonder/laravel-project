@@ -57,10 +57,6 @@
                                <div class="col-md-12">
                                   <div class="profile-img-edit">
                                      <img class="profile-pic" src="{{asset('/storage/images/'.Auth::user()->image)}}" alt="profile-pic">
-                                     <div class="p-image">
-                                        <i class="ri-pencil-line upload-button"></i>
-                                        <input class="file-upload" type="file" name="image"/>
-                                     </div>
                                   </div>
                                </div>
                             </div>

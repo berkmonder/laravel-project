@@ -142,6 +142,12 @@ Zip Code: 85001
                                   </textarea>
                                </div>
                             </div>
+                            @if(Auth::user()->image)
+                                <img class="image rounded-circle" src="{{asset('/storage/images/'.Auth::user()->image)}}" alt="profile_image" style="width: 80px;height: 80px; padding: 10px; margin: 0px; ">
+                            @endif
+                            <div class="card-body">
+                                    <input type="file" name="image">
+                            </div>
                             <button type="submit" class="btn btn-primary mr-2">Submit</button>
                             <button type="reset" class="btn iq-bg-danger">cancel</button>
                          </form>

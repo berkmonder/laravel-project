@@ -23,7 +23,7 @@ class ProfileController extends Controller
 
     return view('profile.show', compact('profile'));
   }
-  
+
   public function edit($profile)
   {
     $profile = \App\Models\User::where('id', auth()->user()->id)->where('id', $profile)->first();
@@ -43,7 +43,7 @@ class ProfileController extends Controller
       request()->image->storeAs('images',$filename,'public');
       Auth()->user()->update(['image'=>$filename]);
     }
-    
+
     $profile->update($data);
 
     return redirect('/profile');

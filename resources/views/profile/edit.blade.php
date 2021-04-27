@@ -123,9 +123,11 @@
                                                 <option>Louisiana</option>
                                             </select>
                                         </div>
-                                        <div class="custom-control custom-switch custom-control-inline">
-                                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                            <label class="custom-control-label" for="customSwitch1">Hidden</label>
+                                        <div class="form-group col-sm-6">
+                                            <div class="custom-control custom-switch custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                <label class="custom-control-label" for="customSwitch1">Hidden</label>
+                                            </div>
                                         </div>
                                         <div class="form-group col-sm-12">
                                             <label>Address:</label>
@@ -211,4 +213,6 @@ Zip Code: 85001
                 </div>
             </div>
         </div>
-        @endsection
+    </div>
+</div>
+@endsection

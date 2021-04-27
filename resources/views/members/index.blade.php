@@ -50,10 +50,20 @@
                         <p class="mb-0">{{ $member1->id }}</p>
                     </div>
                     @foreach (\App\Models\User::where('memberId', $member1->id)->get() as $member2)
-                    {{ $member2->name }}
-                    @foreach (\App\Models\User::where('memberId', $member2->id)->get() as $member3)
-                    {{ $member3->name }}
-                    @endforeach
+                    <div class="col-sm-6 col-md-3">
+                        <div class="iq-card">
+                            <div class="iq-card-body text-center">
+                                <div class="doc-profile">
+                                    {{ $member2->name }}
+                                </div>
+                                <div>
+                                    @foreach (\App\Models\User::where('memberId', $member2->id)->get() as $member3)
+                                    {{ $member3->name }}
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     @endforeach
                 </div>
             </div>
